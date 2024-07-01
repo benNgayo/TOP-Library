@@ -65,6 +65,7 @@ function displayBook(book) {
     <button class="toggle-read-btn">
       Toggle Read
      </button>
+     <button class="delete-btn">Delete</button>
   `;
 
   bookLibrary.appendChild(bookCard);
@@ -74,5 +75,14 @@ function displayBook(book) {
     book.read = !book.read;
     const readStatus = bookCard.getElementsByClassName("book-read-status")[0];
     readStatus.textContent = book.read ? "Read" : "Not read yet";
+  });
+
+  const deleteBtn = bookCard.getElementsByClassName("delete-btn")[0];
+  deleteBtn.addEventListener("click", () => {
+    bookLibrary.removeChild(bookCard);
+    const index = myLibrary.indexOf(book);
+    if (index > -1) {
+      myLibrary.splice(index, 1);
+    }
   });
 }

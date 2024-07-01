@@ -135,3 +135,17 @@ form p {
   font-style: italic;
   color: #666;
 }
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
